@@ -194,7 +194,7 @@ def main():
                         print t_est_refined
 
                         # x,y update,does not change tz:
-                        _, ts_est_refined, _ = codebook.auto_pose6d(sess, test_crop, test_bb, Ks_test[view].copy(), top_nn, train_args,depth_pred=t_est_refined[2])
+                        _, ts_est_refined = codebook.auto_pose6d(sess, test_crop, test_bb, Ks_test[view].copy(), top_nn, train_args,depth_pred=t_est_refined[2])
                         t_est_refined = ts_est_refined[p]
 
                         # rotation icp, only accepted if below 20 deg change
