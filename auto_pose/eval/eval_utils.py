@@ -31,7 +31,7 @@ def get_gt_scene_crops(scene_id, eval_args, train_args):
     
 
     if os.path.exists(current_file_name):
-        data = np.load(current_file_name)
+        data = np.load(current_file_name, allow_pickle=True)
         test_img_crops = data['test_img_crops'].item()
         test_img_depth_crops = data['test_img_depth_crops'].item()
         bb_scores = data['bb_scores'].item()
