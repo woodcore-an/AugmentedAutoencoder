@@ -7,4 +7,5 @@ install
 /AAE_workspace
 venv/
 workspace/
+/autoencoder_ws
 
